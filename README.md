@@ -42,7 +42,7 @@ This portfolio website contains a cumulative list of my projects and ways to con
 
 #### Deployment
 
-The website is deployed [here](#)
+The website is deployed [here](https://bizthehabesha.github.io/bisratgebrekidan-portfolio/).
 
 #### Installation
 
@@ -62,7 +62,7 @@ N/A
 
 ## License
 
-No liscense
+No liscense.
 
 [Back To The Top](#portfolio)
 
