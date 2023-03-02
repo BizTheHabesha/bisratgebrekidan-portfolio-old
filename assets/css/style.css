@@ -1,0 +1,19 @@
+/* body{
+    display: flex;
+} */
+body, html {
+    height: 100%;
+    line-height: 1.8em;
+    font-weight: 400;
+    font-family:"Andale Mono", "Lato", sans-serif;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    border: 1px solid #000;
+    padding: 0px 4px;
+}
+/* .parallax-img-header{
+    background-image:url('../img/plh-code-on-laptop.jpg');
+    min-height:100%;
+} */
