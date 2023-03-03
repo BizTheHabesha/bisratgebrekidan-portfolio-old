@@ -48,6 +48,7 @@ a{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    /* background-attachment is the most crucial part of the parallax effect */
     background-attachment: fixed;
 }
 
@@ -67,17 +68,21 @@ a{
     justify-content: center;
 }
 
+/* Allows header elements to move flex-wise */
 header{
     display:flex;
     flex-flow:row wrap;
     font-weight: 600;
 }
 
+/* The section containing the 'Hello My name's Biz' text. */
 .header-flex{
     position:relative;
     left:-0%;
 }
 
+/* Allows the hello text to move whilst still in the flow, and similarly for the
+rest of the header text below */
 #hello{
     position:relative;
     font-size:200%;
@@ -93,10 +98,12 @@ header{
     top:-.5em;
 }
 
+/* The text box that only shows up on mobile. Disabled by default */
 #code-things{
     display:none;
 }
 
+/* Allows movment of the navbar seperatly from the text in the header-flex div */
 .header-nav{
     position:relative;
     right:-4em;
@@ -105,6 +112,7 @@ header{
     top:-7em;
 }
 
+/* Allows movement of the links spereatly from the text in the header-nav div */
 .header-link{
     font-size: 700%;
     padding:40px 0px;
@@ -130,48 +138,51 @@ header{
     padding: 20px;
 }
 
-/* .after-header{
+/* Section dividers between the parallax images can provide a different aesthetic. */
+/* .section-divider{
     height:20%;
 } */
 
+/* Background image and size for projects section */
 .parallax-img-projects{
     background-image: url('../img/plh-code-on-screen.jpg');
     min-height: 70%;
 }
 
+/* Background image and size for about me section */
 .parallax-img-about-me{
     background-image: url('../img/plh-large-code-block.jpg');
     min-height: 70%;
 }
 
+/* Background image and size for contact section */
 .parallax-img-contact{
     background-image: var(--std-background-img);
     min-height: 70%;
 }
+
+/* Background image and size for footer section */
 .parallax-img-footer{
     background-image: var(--std-background-img);
     min-height:20%;
 }
-@media (max-width: 1024px){
-    .parallax-img{
-        background-attachment: unset;
-    }
-}
-/* Disable parallax on mobile devices */
+
+/* Disable large buttons once the screen can no longer show them. Incidently, this also
+contains any changes for tablets and small laptops. */
 @media (max-width: 955px){
-    .header-text{
-        position: unset;
+    .header-nav{
+        display:none;
     }
     #code-things{
         display:block;
     }
-    .header-nav{
-        display:none;
+    /* TODO: A differently styled navbar for tablets and small laptops */
+}
+
+/* Disable parallax on mobile devices */
+@media (max-width: 480px){
+    .parallax-img{
+        background-attachment: unset;
     }
     /* TODO: A hidden navbar for mobile */
 }
-
-/* .parallax-img-header{
-    background-image:url('../img/plh-code-on-laptop.jpg');
-    min-height:100%;
-} */
