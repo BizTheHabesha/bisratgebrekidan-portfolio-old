@@ -5,14 +5,19 @@
 /* Define some variables to use later */
 :root{
     --std-border-color: rgb(34, 25, 46);
-    --std-border-thickness: 1px;
-    --std-border-radius: 5px;
+    --std-border-thickness: 3px;
+    --std-border-radius: 10px;
     --dark: #666;
     --light: #CCC;
     --light-darker: #b3b3b3;
-    --dark-lighter: #8d8d8d;
+    --dark-lighter: #8a8494;
     --background-color: #1f2441;
     --std-background-img: url('../img/portfolio-header-bgimg.jpg');
+    --projects-background-img: url('../img/plh-code-on-screen.jpg');
+    --card-img-width: 26em;
+    --card-img-height: calc(var(--card-img-width)/2);
+    --gradient-max: #7a00c0;
+    --gardient-min: #25003a;
 }
 /* Some default styling for the webpage */
 body, html {
@@ -37,8 +42,15 @@ a{
 /* Some different styling for the header links */
 .header-link{
     display:inline;
-    border: var(--std-border-thickness) solid var(--light-darker);
+    border: var(--std-border-thickness) solid var(--dark-lighter);
     border-radius: var(--std-border-radius);
+    transition: 0.5s;
+}
+
+.header-link:hover{
+    border: var(--std-border-thickness) solid var(--light-darker);
+    text-shadow: var(--gradient-max) 1px 0 10px;
+    box-shadow: inset var(--gradient-max) 1px 0 10px;
 }
 
 /* Add parallax and styling to parallax imgs, including transparency*/
@@ -57,6 +69,11 @@ a{
     background-color: var(--background-color);
     text-align:center;
     padding: 50px 80px;
+    font-size: 500%;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 700;
+    scroll-behavior: smooth;
 }
 
 /* Add background image and styling to the header section */
@@ -78,7 +95,9 @@ header{
 /* The section containing the 'Hello My name's Biz' text. */
 .header-flex{
     position:relative;
-    left:-0%;
+    top: -100px;
+    right: 0px;
+    transition: 1s;
 }
 
 /* Allows the hello text to move whilst still in the flow, and similarly for the
@@ -145,8 +164,106 @@ rest of the header text below */
 
 /* Background image and size for projects section */
 .parallax-img-projects{
-    background-image: url('../img/plh-code-on-screen.jpg');
+    background-image: var(--projects-background-img);
     min-height: 70%;
+}
+
+.cards-container{
+    flex:4;
+    padding:10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.card{
+    border: 5px var(--background-color) solid;
+    border-radius: 5px;
+    flex: 0 1 25%;
+    margin: 20px;
+    background-color: #25003a;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: var(--std-background-img);
+    background-attachment: fixed;
+    position:relative;
+    transition: 0.5s;
+}
+
+.card:hover{
+    /* transition-timing-function: ease; */
+    border: 5px var(--light) solid;
+    box-shadow: 10px 1em 1em var(--gradient-max);
+}
+
+.card-image-link{
+    padding:0% var(--card-img-width) var(--card-img-height) 0%;
+}
+
+.card-title{
+    background-image: var(--projects-background-img);
+    background-attachment: fixed;
+    font-size:200%;
+    border: 5px var(--background-color) dashed;
+    border-radius:10px;
+    position: relative;
+    margin-top:-20px;
+    /* background-color: var(--dark); */
+    text-align: center;
+}
+
+.card-desc{
+    font-size: 80%;
+    line-height: 1.4;
+    color:var(--background-color);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.card-content{
+    font-family:monospace;
+    font-size:150%;
+    border-radius:10px;
+    background-image: linear-gradient(
+        rgba(51, 0, 99, 0.3) 0%,
+        rgba(154, 2, 255, 0.6) 100%
+    );
+    margin: 0px 10px 10px 10px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: var(--card-img-height);
+    width: var(--card-img-width);
+    transition: 0.3s;
+}
+
+.card-content:hover{
+    opacity:0.7;
+}
+
+.card-title .card-content{
+    border-radius:8px;
+    transition:all 0.5s ease-in-out;
+}
+
+#css-snippets-card{
+    background-image: url("../img/snippet-screenshot.png");
+}
+
+#chess-card{
+    background-image: url("../img/chess-screenshot.png");
+}
+
+#oasis-online-card{
+    background-image: url("../img/oasis-online-screenshot.png");
+}
+
+#prework-card{
+    background-image: url("../img/prework-screenshot.png")
 }
 
 /* Background image and size for about me section */
@@ -169,20 +286,29 @@ rest of the header text below */
 
 /* Disable large buttons once the screen can no longer show them. Incidently, this also
 contains any changes for tablets and small laptops. */
-@media (max-width: 955px){
+@media only screen and (max-width: 955px){
     .header-nav{
         display:none;
     }
     #code-things{
         display:block;
     }
+    .header-flex{
+        top: 0px;
+        transition: 1s;
+    }
     /* TODO: A differently styled navbar for tablets and small laptops */
 }
 
 /* Disable parallax on mobile devices */
-@media (max-width: 480px){
+@media only screen and (max-width: 480px){
     .parallax-img{
         background-attachment: unset;
+    }
+    .card{
+        background-attachment: unset;
+        flex: 1 0 200px;
+        margin: 0;
     }
     /* TODO: A hidden navbar for mobile */
 }
