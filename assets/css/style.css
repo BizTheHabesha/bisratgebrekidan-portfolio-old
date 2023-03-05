@@ -74,6 +74,8 @@ a{
     letter-spacing: 15px;
     font-weight: 700;
     scroll-behavior: smooth;
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Add background image and styling to the header section */
@@ -291,6 +293,17 @@ contains any changes for tablets and small laptops. */
     .header-flex{
         top: 0px;
         transition: 1s;
+    }
+    .section-divider{
+        background-color: var(--background-color);
+        text-align:center;
+        /* padding: 50px 80px; */
+        font-size: 300%;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-weight: 700;
+        scroll-behavior: smooth;
+        transition: .5s;
     }
     /* TODO: A differently styled navbar for tablets and small laptops */
 }
