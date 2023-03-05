@@ -157,11 +157,6 @@ rest of the header text below */
     padding: 20px;
 }
 
-/* Section dividers between the parallax images can provide a different aesthetic. */
-/* .section-divider{
-    height:20%;
-} */
-
 /* Background image and size for projects section */
 .parallax-img-projects{
     background-image: var(--projects-background-img);
