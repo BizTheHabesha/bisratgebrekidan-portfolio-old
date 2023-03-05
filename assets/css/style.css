@@ -185,7 +185,6 @@ rest of the header text below */
     background-repeat: no-repeat;
     background-image: var(--std-background-img);
     background-attachment: fixed;
-    position:relative;
     transition: 0.5s;
 }
 
@@ -260,7 +259,7 @@ rest of the header text below */
 }
 
 #prework-card{
-    background-image: url("../img/prework-screenshot.png")
+    background-image: url("../img/prework-screenshot.png");
 }
 
 /* Background image and size for about me section */
@@ -308,15 +307,21 @@ contains any changes for tablets and small laptops. */
     /* TODO: A differently styled navbar for tablets and small laptops */
 }
 
+/* Disable background images in project cards and increase flexbox shrink and grow to fit
+the entire column and no more. */
+@media only screen and (max-width: 555px){
+    .card{
+        flex: 1 2 auto;
+    }
+    .card-content{
+        display: none;
+    }
+}
+
 /* Disable parallax on mobile devices */
 @media only screen and (max-width: 480px){
-    .parallax-img{
+    .parallax-img .card{
         background-attachment: unset;
-    }
-    .card{
-        background-attachment: unset;
-        flex: 1 0 200px;
-        margin: 0;
     }
     /* TODO: A hidden navbar for mobile */
 }
