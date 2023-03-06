@@ -177,7 +177,7 @@ rest of the header text below */
 .card{
     border: 5px var(--background-color) solid;
     border-radius: 5px;
-    flex: 0 1 25%;
+    flex: 0 0 25%;
     margin: 20px;
     background-color: #25003a;
     background-position: center;
@@ -318,6 +318,21 @@ rest of the header text below */
     min-height:20%;
 }
 
+@media only screen and (max-height: 1000px) and (min-width: 956px){
+    .header-nav{
+        top:0px;
+    }
+    .header-flex{
+        top:0px;
+    }
+    .header-flex *{
+        top: 50%;
+    }
+    #biz{
+        top: 40%;
+    }
+}
+
 /* Disable large buttons once the screen can no longer show them. Incidently, this also
 contains any changes for tablets and small laptops. */
 @media only screen and (max-width: 955px){
@@ -357,6 +372,7 @@ the entire column and no more. */
     .section-divider{
         font-size: 250%;
     }
+    
 }
 
 /* Disable parallax on mobile devices */
