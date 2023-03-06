@@ -266,8 +266,46 @@ rest of the header text below */
 .parallax-img-about-me{
     background-image: url('../img/plh-large-code-block.jpg');
     min-height: 70%;
+    align-items: center;
+    justify-content: space-evenly;
+    display:flex;
 }
 
+.img-container{
+    display:flex;
+    align-items:center;
+    height:max-content;
+    width:max-content;
+}
+
+#selfie{
+    height: 20rem;
+    width: auto;
+    border: 5px var(--dark-lighter) solid;
+    border-radius: 10px;
+    /* margin-left: 12%; */
+}
+
+.text-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* position:relative; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: var(--std-background-img);
+    /* margin: 10px 10px 10px 12%;    */
+    width:50%;
+    border: 5px var(--dark-lighter) solid;
+    border-radius: 10px;
+}
+
+.selfie-text{
+    color:var(--background-color);
+    padding: 5px;
+}
 /* Background image and size for contact section */
 .parallax-img-contact{
     background-image: var(--std-background-img);
@@ -316,12 +354,20 @@ the entire column and no more. */
     .card-content{
         display: none;
     }
+    .section-divider{
+        font-size: 250%;
+    }
 }
 
 /* Disable parallax on mobile devices */
 @media only screen and (max-width: 480px){
     .parallax-img .card{
         background-attachment: unset;
+    }
+    .section-divider{
+        padding:15px 10px;
+        font-size: 200%;
+        letter-spacing: 7px;
     }
     /* TODO: A hidden navbar for mobile */
 }
