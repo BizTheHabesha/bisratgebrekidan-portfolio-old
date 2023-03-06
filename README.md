@@ -2,7 +2,11 @@
 
 
 ### Original Wireframe
-![Project Image](./assets/img/Portfolio%20Orginal%20Wireframe.jpg)
+![Wireframe Image](./assets/img/Portfolio%20Orginal%20Wireframe.jpg)
+
+### Finished Site
+![Final image](./assets/img/127.0.0.1_5500_index.html.png)
+The nature of full size screenshots misrepresents fixed background images (parallax effects)
 
 ---
 
