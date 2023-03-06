@@ -31,6 +31,7 @@ a{
     padding: 0px 4px;
 }
 
+/* Set the text color for all header elements */
 .header{
     color: var(--background-color);
 }
@@ -47,6 +48,7 @@ a{
     display:block;
 }
 
+/* Button styling for header links */
 .header-link:hover{
     border: var(--std-border-thickness) solid var(--light-darker);
     text-shadow: var(--gradient-max) 1px 0 10px;
@@ -110,7 +112,6 @@ rest of the header text below */
 }
 #myname{
     position:relative;
-
 }
 #biz{
     position:relative;
@@ -154,10 +155,10 @@ rest of the header text below */
 /* Background image and size for projects section */
 .parallax-img-projects{
     background-image: var(--projects-background-img);
-    /* min-height: 70%; */
     height: fit-content;
 }
 
+/* Flexbox to hold all the project cards */
 .cards-container{
     flex:4;
     padding:10px;
@@ -167,6 +168,7 @@ rest of the header text below */
     align-items: flex-start;
 }
 
+/* Each card is itself a flexbox */
 .card{
     border: 5px var(--background-color) solid;
     border-radius: 5px;
@@ -181,43 +183,46 @@ rest of the header text below */
     transition: 0.5s;
 }
 
+/* Card hover style for project cards */
 .card:hover{
-    /* transition-timing-function: ease; */
     border: 5px var(--light) solid;
     box-shadow: 10px 1em 1em var(--gradient-max);
 }
 
+/* Make the first card larger than the others whislt maintaining the flex display */
 #first-card{
     flex: 1 2 45%;
 }
 
+/* To ensure the entire card image is a link, the image is a background for the link */
 .card-image-link{
     padding:0% var(--card-img-width) var(--card-img-height) 0%;
 }
 
+/* Add styling to card title */
 .card-title{
-    background-image: var(--projects-background-img);
+    background-image: linear-gradient(
+        var(--gardient-min) 0%,
+        var(--gradient-max) 100%
+    );
     background-attachment: fixed;
     font-size:200%;
-    border: 5px var(--background-color) dashed;
+    border: 3px var(--background-color) solid;
     border-radius:10px;
     position: relative;
     margin-top:-20px;
-    /* background-color: var(--dark); */
     text-align: center;
 }
 
+/* Add positioning and styling options */
 .card-desc{
     font-size: 80%;
     line-height: 1.4;
     color:var(--background-color);
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin: 10px 10px 10px 10px;
+    margin:10px;
 }
 
+/* Ensuring the background image appears properly in the cards*/
 .card-content{
     font-family:monospace;
     font-size:150%;
@@ -230,35 +235,35 @@ rest of the header text below */
     background-repeat: no-repeat;
     background-size:cover;
     height: var(--card-img-height);
-    width: var(--card-img-width);
     transition: 0.3s;
 }
 
+/* Custom width for the first project card */
 #first-card .card-content{
     width: 98%;
 }
 
+/* Add styling for card image on hover */
 .card-content:hover{
     opacity:0.7;
 }
 
+/* Common border and transition for card title and content */
 .card-title .card-content{
     border-radius:8px;
     transition:all 0.5s ease-in-out;
 }
 
+/* Custom card images for each project */
 #css-snippets-card{
     background-image: url("../img/snippet-screenshot.png");
 }
-
 #chess-card{
     background-image: url("../img/chess-screenshot.png");
 }
-
 #oasis-online-card{
     background-image: url("../img/oasis-online-screenshot.png");
 }
-
 #prework-card{
     background-image: url("../img/prework-screenshot.png");
 }
@@ -272,6 +277,7 @@ rest of the header text below */
     display:flex;
 }
 
+/* Styling for flexbox image containers */
 .img-container{
     display:flex;
     align-items:center;
@@ -279,30 +285,30 @@ rest of the header text below */
     width:max-content;
 }
 
+/* Styling for the about me selfie */
 #selfie{
     height: 20rem;
     width: auto;
     border: 5px var(--dark-lighter) solid;
     border-radius: 10px;
-    /* margin-left: 12%; */
 }
 
+/* Styling for flexbox text containers */
 .text-container{
     display:flex;
     align-items: center;
     justify-content: center;
-    /* position:relative; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: var(--std-background-img);
-    /* margin: 10px 10px 10px 12%;    */
     width:50%;
     border: 5px var(--dark-lighter) solid;
     border-radius: 10px;
 }
 
+/* Styling for the about me selife text */
 .selfie-text{
     color:var(--background-color);
     padding: 5px;
@@ -313,6 +319,7 @@ rest of the header text below */
     min-height: 70%;
 }
 
+/* Styling for the navigation in the contact section */
 .contact-nav{
     display: flex;
     flex: 2 0 200;
@@ -320,6 +327,7 @@ rest of the header text below */
     align-items: center;
 }
 
+/* Styling for contact link buttons */
 .contact-link{
     font-size: 400%;
     border: var(--std-border-thickness) solid var(--dark-lighter);
@@ -333,27 +341,29 @@ rest of the header text below */
     line-height: 0.8;
 }
 
+/* Add text color for the contact links */
 .contact-link-desc{
     color:var(--background-color);
 }
 
+/* Add hover styling for contact links */
 .contact-link:hover{
     border: var(--std-border-thickness) solid var(--light-darker);
     text-shadow: var(--gradient-max) 1px 0 10px;
     box-shadow: inset var(--gradient-max) 1px 0 10px;
 }
 
-
+/* Emoji appears after text for contact nav buttons */
 .mailto-link:hover::after{
     position:absolute;
     content: "📧"
 }
-
 .tel-link:hover::after{
     position:absolute;
     content: "📱"
 }
 
+/* Fix footer to the bottom and move the items inside through flex dispaly */
 footer{
     display: flex;
     align-items: center;
@@ -366,6 +376,7 @@ footer{
     width: 100%;
 }
 
+/* Header text tends to overflow on tall screens */
 @media only screen and (max-height: 1000px) and (min-width: 956px){
     .header-nav{
         top:0px;
