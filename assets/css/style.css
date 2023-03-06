@@ -162,7 +162,8 @@ rest of the header text below */
 /* Background image and size for projects section */
 .parallax-img-projects{
     background-image: var(--projects-background-img);
-    min-height: 70%;
+    /* min-height: 70%; */
+    height: fit-content;
 }
 
 .cards-container{
@@ -356,6 +357,13 @@ contains any changes for tablets and small laptops. */
         font-weight: 700;
         scroll-behavior: smooth;
         transition: .5s;
+    }
+    .parallax-img-about-me{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .text-container{
+        width:90%;
     }
     /* TODO: A differently styled navbar for tablets and small laptops */
 }
