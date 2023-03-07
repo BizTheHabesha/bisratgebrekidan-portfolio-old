@@ -367,13 +367,52 @@ rest of the header text below */
 footer{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 6%;
     background-color: var(--background-color);
     color:var(--light);
     font-size: 200%;
     text-align: center;
     width: 100%;
+}
+
+/* Add styling to footer links */
+.footer-link{
+    font-size: 75%;
+    transition: 0.1s;
+}
+
+/* Add styling to footer links on hover, same styling as header above */
+.footer-link:hover{
+    text-shadow: var(--gradient-max) 1px 0 10px;
+}
+
+/* Add emoji and animation to specific links */
+#github-footer-link::after{
+    opacity: 0%;
+    content:"🖥️";
+    position:absolute;
+    transition: 0.1s;
+}
+#twitch-footer-link::after{
+    opacity:0%;
+    content:"🎥";
+    position: absolute;
+    transition:0.1s;
+}
+
+/* Emojis appear on hover and dont affect the flow */
+#github-footer-link:hover::after{
+    content:"🖥️";
+    transition: 0.3s;
+    position: absolute;
+    opacity: 100%;
+}
+#twitch-footer-link:hover::after{
+    content:"🎥";
+    transition: 0.3s;
+    position: absolute;
+    opacity: 100%;
 }
 
 /* Header text tends to overflow on tall screens */
