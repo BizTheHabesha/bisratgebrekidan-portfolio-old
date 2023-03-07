@@ -14,8 +14,11 @@
         <!-- This image title does not have the title class because it is 
         a flexbox and will not have the same styling -->
         <div class="header-intro">
+            <!-- Add border so the fixed image renders properly -->
             <span class="parallax-img-border">
+                <!-- Purely for accessiblity, acts as span -->
                 <header>
+                    <!-- Header elements that introduce the website. The last one is only visible on mobile -->
                     <div class="header header-flex">
                         <h1 class="header-text" id="hello">Hello!</h1>
                         <h2 class="header-text" id="myname">My name's</h2>
@@ -26,8 +29,10 @@
                     </div>
                     <nav class="header-nav">
                         <div class="header">
+                            <!-- Navigation elements for the header -->
                             <h2 class="header-text">I code things,</h2>
                             <h2 class="header-text">check it out ⬇️</h2>
+                            <!-- The header links are moved to the side together, and stylized seperatly -->
                             <div class="header-links">
                                 <h2 class="header-link header-text" id="projects-link">
                                     <a href="#projects">Projects</a>
@@ -48,15 +53,18 @@
             </span>
         </div>
     </div>
-
+    <!-- Section divider allows for cleaner parallax transitions -->
     <section id="projects" class="section-divider after-header">
         <h3>Projects</h3>
     </section>
-
+    <!-- Projects section -->
     <div class="parallax-img parallax-img-projects">
-        <!-- <div class="parallax-img-text"></div> -->
+        <!-- Flexbox which contains all cards -->
         <div class="cards-container">
+            <!-- Every card is a seperate section with specific styling -->
+            <!-- The first card is larger than the others -->
             <section class="card" id="first-card">
+                <!-- All elements of the card has there own link to maximize anchor tag range. -->
                 <h4 class="card-title">
                     <a href="https://github.com/BizTheHabesha/css-snippet-cheatsheet">
                         CSS Snippets
@@ -129,8 +137,8 @@
         <h3>About Me</h3>
     </section>
 
+
     <div class="parallax-img parallax-img-about-me">
-        <div class="parallax-img-text"></div>
         <div class="img-container">
             <img id="selfie" src="./assets/img/selfie.jpeg" alt="A picture of Biz in the Boulder mountains.">
         </div>
@@ -169,7 +177,7 @@
     </section>
 
     <div class="parallax-img parallax-img-contact">
-        <div class="parallax-img-text"></div>
+        <!-- Contact nav takes most of styling from header, but slight differences require additional classes -->
         <div class="contact-nav">
             <h2 class="contact-link mailto-link">
                 <a href="mailto:gebrekidanbisratt@gmail.com">
