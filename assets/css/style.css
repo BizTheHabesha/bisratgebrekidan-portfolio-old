@@ -255,8 +255,8 @@ rest of the header text below */
 }
 
 /* Custom card images for each project */
-#css-snippets-card{
-    background-image: url("../img/snippet-screenshot.png");
+#boss-fight-card{
+    background-image: url("../img/boss-fight-screenshot.png");
 }
 #chess-card{
     background-image: url("../img/chess-screenshot.png");
