@@ -1,498 +1,501 @@
 /* Define some variables to use later */
-:root{
-    --std-border-color: rgb(34, 25, 46);
-    --std-border-thickness: 3px;
-    --std-border-radius: 10px;
-    --dark: #666;
-    --light: #CCC;
-    --light-darker: #b3b3b3;
-    --dark-lighter: #8a8494;
-    --background-color: #1f2441;
-    --std-background-img: url('../img/portfolio-header-bgimg.jpg');
-    --projects-background-img: url('../img/plh-code-on-screen.jpg');
-    --card-img-width: 26em;
-    --card-img-height: calc(var(--card-img-width)/2);
-    --gradient-max: #7a00c0;
-    --gardient-min: #25003a;
+:root {
+	--std-border-color: rgb(34, 25, 46);
+	--std-border-thickness: 3px;
+	--std-border-radius: 10px;
+	--dark: #666;
+	--light: #ccc;
+	--light-darker: #b3b3b3;
+	--dark-lighter: #8a8494;
+	--background-color: #1f2441;
+	--std-background-img: url("../img/portfolio-header-bgimg.jpg");
+	--projects-background-img: url("../img/plh-code-on-screen.jpg");
+	--card-img-width: 26em;
+	--card-img-height: calc(var(--card-img-width) / 2);
+	--gradient-max: #7a00c0;
+	--gardient-min: #25003a;
 }
 /* Some default styling for the webpage */
-body, html {
-    height: 100%;
-    line-height: 1.6em;
-    font-weight: 400;
-    font-family:"Andale Mono", "Lato", sans-serif;
-    color:var(--light);
-    background-color: var(--light);
+body,
+html {
+	height: 100%;
+	line-height: 1.6em;
+	font-weight: 400;
+	font-family: "Andale Mono", "Lato", sans-serif;
+	color: var(--light);
+	background-color: var(--light);
 }
 /* Some default styling to links */
-a{
-    text-decoration: none;
-    color:inherit;
-    padding: 0px 4px;
+a {
+	text-decoration: none;
+	color: inherit;
+	padding: 0px 4px;
 }
 
 /* Set the text color for all header elements */
-.header{
-    color: var(--background-color);
+.header {
+	color: var(--background-color);
 }
 
 /* Some different styling for the header links */
-.header-link{
-    display:inline;
-    border: var(--std-border-thickness) solid var(--dark-lighter);
-    border-radius: var(--std-border-radius);
-    transition: 0.5s;
-    font-size: 700%;
-    padding:40px 0px;
-    margin: 30px 0px;
-    display:block;
+.header-link {
+	display: inline;
+	border: var(--std-border-thickness) solid var(--dark-lighter);
+	border-radius: var(--std-border-radius);
+	transition: 0.5s;
+	font-size: 700%;
+	padding: 40px 0px;
+	margin: 30px 0px;
+	display: block;
 }
 
 /* Button styling for header links */
-.header-link:hover{
-    border: var(--std-border-thickness) solid var(--light-darker);
-    text-shadow: var(--gradient-max) 1px 0 10px;
-    box-shadow: inset var(--gradient-max) 1px 0 10px;
+.header-link:hover {
+	border: var(--std-border-thickness) solid var(--light-darker);
+	text-shadow: var(--gradient-max) 1px 0 10px;
+	box-shadow: inset var(--gradient-max) 1px 0 10px;
 }
 
 /* Add parallax and styling to parallax imgs, including transparency*/
-.parallax-img{
-    position:relative;
-    opacity:0.7;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-attachment is the most crucial part of the parallax effect */
-    background-attachment: fixed;
+.parallax-img {
+	position: relative;
+	opacity: 0.7;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* background-attachment is the most crucial part of the parallax effect */
+	background-attachment: fixed;
 }
 
 /* Add styling to the sections that divide the image areas */
-.section-divider{
-    background-color: var(--background-color);
-    text-align:center;
-    padding: 50px 80px;
-    font-size: 500%;
-    text-transform: uppercase;
-    letter-spacing: 15px;
-    font-weight: 700;
-    scroll-behavior: smooth;
-    transition: 0.3s;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+.section-divider {
+	background-color: var(--background-color);
+	text-align: center;
+	padding: 50px 80px;
+	font-size: 500%;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+	font-weight: 700;
+	scroll-behavior: smooth;
+	transition: 0.3s;
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Add background image and styling to the header section */
-.parallax-img-header{
-    background-image: var(--std-background-img);
-    min-height: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.parallax-img-header {
+	background-image: var(--std-background-img);
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Allows header elements to move flex-wise */
-header{
-    display:flex;
-    flex-flow:row wrap;
-    font-weight: 600;
+header {
+	display: flex;
+	flex-flow: row wrap;
+	font-weight: 600;
 }
 
 /* The section containing the 'Hello My name's Biz' text. */
-.header-flex{
-    position:relative;
-    top: -100px;
-    right: 0px;
-    transition: 1s;
+.header-flex {
+	position: relative;
+	top: -100px;
+	right: 0px;
+	transition: 1s;
 }
 
 /* Allows the hello text to move whilst still in the flow, and similarly for the
 rest of the header text below */
-#hello{
-    position:relative;
-    font-size:200%;
+#hello {
+	position: relative;
+	font-size: 200%;
 }
-#myname{
-    position:relative;
+#myname {
+	position: relative;
 }
-#biz{
-    position:relative;
-    font-size:600%;
-    right:-1em;
-    top:-.5em;
+#biz {
+	position: relative;
+	font-size: 600%;
+	right: -1em;
+	top: -0.5em;
 }
 
 /* The text box that only shows up on mobile. Disabled by default */
-#code-things{
-    display:none;
+#code-things {
+	display: none;
 }
 
 /* Allows movment of the navbar seperatly from the text in the header-flex div */
-.header-nav{
-    position:relative;
-    right:-4em;
-    position:relative;
-    right:-9em;
-    top:-7em;
+.header-nav {
+	position: relative;
+	right: -4em;
+	position: relative;
+	right: -9em;
+	top: -7em;
 }
 
 /* Add stlying to text that cover parallax images */
-.parallax-img-text{
-    position:absolute;
-    top:20%;
-    width:100%;
-    text-align: center;
-    color: var(--dark);
-    font-size:27px;
-    letter-spacing:8px;
-    text-transform: uppercase;
-    background-color: var(--background-color);
+.parallax-img-text {
+	position: absolute;
+	top: 20%;
+	width: 100%;
+	text-align: center;
+	color: var(--dark);
+	font-size: 27px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+	background-color: var(--background-color);
 }
 
 /* Add styling to the background of the text over the images*/
-.parallax-img-text .parallax-img-border{
-    padding: 20px;
+.parallax-img-text .parallax-img-border {
+	padding: 20px;
 }
 
 /* Background image and size for projects section */
-.parallax-img-projects{
-    background-image: var(--projects-background-img);
-    height: fit-content;
+.parallax-img-projects {
+	background-image: var(--projects-background-img);
+	height: fit-content;
 }
 
 /* Flexbox to hold all the project cards */
-.cards-container{
-    flex:4;
-    padding:10px;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+.cards-container {
+	flex: 4;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
 }
 
 /* Each card is itself a flexbox */
-.card{
-    border: 5px var(--background-color) solid;
-    border-radius: 5px;
-    flex: 0 0 25%;
-    margin: 20px;
-    background-color: #25003a;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: var(--std-background-img);
-    background-attachment: fixed;
-    transition: 0.5s;
+.card {
+	border: 5px var(--background-color) solid;
+	border-radius: 5px;
+	flex: 0 0 25%;
+	margin: 20px;
+	background-color: #25003a;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: var(--std-background-img);
+	background-attachment: fixed;
+	transition: 0.5s;
 }
 
 /* Card hover style for project cards */
-.card:hover{
-    border: 5px var(--light) solid;
-    box-shadow: 10px 1em 1em var(--gradient-max);
+.card:hover {
+	border: 5px var(--light) solid;
+	box-shadow: 10px 1em 1em var(--gradient-max);
 }
 
 /* Make the first card larger than the others whislt maintaining the flex display */
-#first-card{
-    flex: 1 2 45%;
+#first-card {
+	flex: 1 2 45%;
 }
 
 /* To ensure the entire card image is a link, the image is a background for the link */
-.card-image-link{
-    padding:0% var(--card-img-width) var(--card-img-height) 0%;
+.card-image-link {
+	padding: 0% var(--card-img-width) var(--card-img-height) 0%;
 }
 
 /* Add styling to card title */
-.card-title{
-    background-image: linear-gradient(
-        var(--gardient-min) 0%,
-        var(--gradient-max) 100%
-    );
-    background-attachment: fixed;
-    font-size:200%;
-    border: 3px var(--background-color) solid;
-    border-radius:10px;
-    position: relative;
-    margin-top:-20px;
-    text-align: center;
+.card-title {
+	background-image: linear-gradient(
+		var(--gardient-min) 0%,
+		var(--gradient-max) 100%
+	);
+	background-attachment: fixed;
+	font-size: 200%;
+	border: 3px var(--background-color) solid;
+	border-radius: 10px;
+	position: relative;
+	margin-top: -20px;
+	text-align: center;
 }
 
 /* Add positioning and styling options */
-.card-desc{
-    font-size: 80%;
-    line-height: 1.4;
-    color:var(--background-color);
-    margin:10px;
+.card-desc {
+	font-size: 80%;
+	line-height: 1.4;
+	color: var(--background-color);
+	margin: 10px;
 }
 
 /* Ensuring the background image appears properly in the cards*/
-.card-content{
-    font-family:monospace;
-    font-size:150%;
-    border-radius:10px;
-    background-image: linear-gradient(
-        rgba(51, 0, 99, 0.3) 0%,
-        rgba(154, 2, 255, 0.6) 100%
-    );
-    margin: 0px 10px 10px 10px;
-    background-repeat: no-repeat;
-    background-size:cover;
-    height: var(--card-img-height);
-    transition: 0.3s;
+.card-content {
+	font-family: monospace;
+	font-size: 150%;
+	border-radius: 10px;
+	background-image: linear-gradient(
+		rgba(51, 0, 99, 0.3) 0%,
+		rgba(154, 2, 255, 0.6) 100%
+	);
+	margin: 0px 10px 10px 10px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: var(--card-img-height);
+	transition: 0.3s;
 }
 
 /* Custom width for the first project card */
-#first-card .card-content{
-    width: 98%;
+#first-card .card-content {
+	width: 98%;
 }
 
 /* Add styling for card image on hover */
-.card-content:hover{
-    opacity:0.7;
+.card-content:hover {
+	opacity: 0.7;
 }
 
 /* Common border and transition for card title and content */
-.card-title .card-content{
-    border-radius:8px;
-    transition:all 0.5s ease-in-out;
+.card-title .card-content {
+	border-radius: 8px;
+	transition: all 0.5s ease-in-out;
 }
 
 /* Custom card images for each project */
-#boss-fight-card{
-    background-image: url("../img/boss-fight-screenshot.png");
+#boss-fight-card {
+	background-image: url("../img/boss-fight-screenshot.png");
 }
-#chess-card{
-    background-image: url("../img/chess-screenshot.png");
+#chess-card {
+	background-image: url("../img/chess-screenshot.png");
 }
-#oasis-online-card{
-    background-image: url("../img/oasis-online-screenshot.png");
+#oasis-online-card {
+	background-image: url("../img/oasis-online-screenshot.png");
 }
-#prework-card{
-    background-image: url("../img/prework-screenshot.png");
+#prework-card {
+	background-image: url("../img/prework-screenshot.png");
+}
+#score-sensei-card {
+	background-image: url("../img/score-sensei-screenshot.png");
 }
 
 /* Background image and size for about me section */
-.parallax-img-about-me{
-    background-image: url('../img/plh-large-code-block.jpg');
-    min-height: 70%;
-    align-items: center;
-    justify-content: space-evenly;
-    display:flex;
+.parallax-img-about-me {
+	background-image: url("../img/plh-large-code-block.jpg");
+	min-height: 70%;
+	align-items: center;
+	justify-content: space-evenly;
+	display: flex;
 }
 
 /* Styling for flexbox image containers */
-.img-container{
-    display:flex;
-    align-items:center;
-    height:max-content;
-    width:max-content;
+.img-container {
+	display: flex;
+	align-items: center;
+	height: max-content;
+	width: max-content;
 }
 
 /* Styling for the about me selfie */
-#selfie{
-    height: 20rem;
-    width: auto;
-    border: 5px var(--dark-lighter) solid;
-    border-radius: 10px;
+#selfie {
+	height: 20rem;
+	width: auto;
+	border: 5px var(--dark-lighter) solid;
+	border-radius: 10px;
 }
 
 /* Styling for flexbox text containers */
-.text-container{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: var(--std-background-img);
-    width:50%;
-    border: 5px var(--dark-lighter) solid;
-    border-radius: 10px;
+.text-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: var(--std-background-img);
+	width: 50%;
+	border: 5px var(--dark-lighter) solid;
+	border-radius: 10px;
 }
 
 /* Styling for the about me selife text */
-.selfie-text{
-    color:var(--background-color);
-    padding: 5px;
+.selfie-text {
+	color: var(--background-color);
+	padding: 5px;
 }
 /* Background image and size for contact section */
-.parallax-img-contact{
-    background-image: var(--std-background-img);
-    min-height: 70%;
+.parallax-img-contact {
+	background-image: var(--std-background-img);
+	min-height: 70%;
 }
 
 /* Styling for the navigation in the contact section */
-.contact-nav{
-    display: flex;
-    flex: 2 0 200;
-    flex-direction: column;
-    align-items: center;
+.contact-nav {
+	display: flex;
+	flex: 2 0 200;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* Styling for contact link buttons */
-.contact-link{
-    font-size: 400%;
-    border: var(--std-border-thickness) solid var(--dark-lighter);
-    border-radius: var(--std-border-radius);
-    padding:40px 0px ;
-    margin: 25px 0px 5px 0px;
-    transition:0.5s;
-    width: 50%;
-    text-align: center;
-    color: var(--background-color);
-    line-height: 0.8;
+.contact-link {
+	font-size: 400%;
+	border: var(--std-border-thickness) solid var(--dark-lighter);
+	border-radius: var(--std-border-radius);
+	padding: 40px 0px;
+	margin: 25px 0px 5px 0px;
+	transition: 0.5s;
+	width: 50%;
+	text-align: center;
+	color: var(--background-color);
+	line-height: 0.8;
 }
 
 /* Add text color for the contact links */
-.contact-link-desc{
-    color:var(--background-color);
+.contact-link-desc {
+	color: var(--background-color);
 }
 
 /* Add hover styling for contact links */
-.contact-link:hover{
-    border: var(--std-border-thickness) solid var(--light-darker);
-    text-shadow: var(--gradient-max) 1px 0 10px;
-    box-shadow: inset var(--gradient-max) 1px 0 10px;
+.contact-link:hover {
+	border: var(--std-border-thickness) solid var(--light-darker);
+	text-shadow: var(--gradient-max) 1px 0 10px;
+	box-shadow: inset var(--gradient-max) 1px 0 10px;
 }
 
 /* Emoji appears after text for contact nav buttons */
-.mailto-link:hover::after{
-    position:absolute;
-    content: "📧"
+.mailto-link:hover::after {
+	position: absolute;
+	content: "📧";
 }
-.tel-link:hover::after{
-    position:absolute;
-    content: "📱"
+.tel-link:hover::after {
+	position: absolute;
+	content: "📱";
 }
 
 /* Fix footer to the bottom and move the items inside through flex dispaly */
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 6%;
-    background-color: var(--background-color);
-    color:var(--light);
-    font-size: 200%;
-    text-align: center;
-    width: 100%;
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 6%;
+	background-color: var(--background-color);
+	color: var(--light);
+	font-size: 200%;
+	text-align: center;
+	width: 100%;
 }
 
 /* Add styling to footer links */
-.footer-link{
-    font-size: 75%;
-    transition: 0.1s;
+.footer-link {
+	font-size: 75%;
+	transition: 0.1s;
 }
 
 /* Add styling to footer links on hover, same styling as header above */
-.footer-link:hover{
-    text-shadow: var(--gradient-max) 1px 0 10px;
+.footer-link:hover {
+	text-shadow: var(--gradient-max) 1px 0 10px;
 }
 
 /* Add emoji and animation to specific links */
-#github-footer-link::after{
-    opacity: 0%;
-    content:"🖥️";
-    position:absolute;
-    transition: 0.1s;
+#github-footer-link::after {
+	opacity: 0%;
+	content: "🖥️";
+	position: absolute;
+	transition: 0.1s;
 }
-#twitch-footer-link::after{
-    opacity:0%;
-    content:"🎥";
-    position: absolute;
-    transition:0.1s;
+#twitch-footer-link::after {
+	opacity: 0%;
+	content: "🎥";
+	position: absolute;
+	transition: 0.1s;
 }
 
 /* Emojis appear on hover and dont affect the flow */
-#github-footer-link:hover::after{
-    content:"🖥️";
-    transition: 0.3s;
-    position: absolute;
-    opacity: 100%;
+#github-footer-link:hover::after {
+	content: "🖥️";
+	transition: 0.3s;
+	position: absolute;
+	opacity: 100%;
 }
-#twitch-footer-link:hover::after{
-    content:"🎥";
-    transition: 0.3s;
-    position: absolute;
-    opacity: 100%;
+#twitch-footer-link:hover::after {
+	content: "🎥";
+	transition: 0.3s;
+	position: absolute;
+	opacity: 100%;
 }
 
 /* Header text tends to overflow on tall screens */
-@media only screen and (max-height: 1000px) and (min-width: 956px){
-    .header-nav{
-        top:0px;
-    }
-    .header-flex{
-        top:0px;
-    }
-    .header-flex *{
-        top: 50%;
-    }
-    #biz{
-        top: 40%;
-    }
+@media only screen and (max-height: 1000px) and (min-width: 956px) {
+	.header-nav {
+		top: 0px;
+	}
+	.header-flex {
+		top: 0px;
+	}
+	.header-flex * {
+		top: 50%;
+	}
+	#biz {
+		top: 40%;
+	}
 }
 
 /* Disable large buttons once the screen can no longer show them. Incidently, this also
 contains any changes for tablets and small laptops. */
-@media only screen and (max-width: 955px){
-    .header-nav{
-        display:none;
-    }
-    #code-things{
-        display:block;
-    }
-    .header-flex{
-        top: 0px;
-        transition: 1s;
-    }
-    .section-divider{
-        background-color: var(--background-color);
-        text-align:center;
-        /* padding: 50px 80px; */
-        font-size: 300%;
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        font-weight: 700;
-        scroll-behavior: smooth;
-        transition: .5s;
-    }
-    .parallax-img-about-me{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .text-container{
-        width:90%;
-    }
-    .contact-link{
-        font-size: 200%;
-        width: 70%;
-    }
-    /* TODO: A differently styled navbar for tablets and small laptops */
+@media only screen and (max-width: 955px) {
+	.header-nav {
+		display: none;
+	}
+	#code-things {
+		display: block;
+	}
+	.header-flex {
+		top: 0px;
+		transition: 1s;
+	}
+	.section-divider {
+		background-color: var(--background-color);
+		text-align: center;
+		/* padding: 50px 80px; */
+		font-size: 300%;
+		text-transform: uppercase;
+		letter-spacing: 10px;
+		font-weight: 700;
+		scroll-behavior: smooth;
+		transition: 0.5s;
+	}
+	.parallax-img-about-me {
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	.text-container {
+		width: 90%;
+	}
+	.contact-link {
+		font-size: 200%;
+		width: 70%;
+	}
+	/* TODO: A differently styled navbar for tablets and small laptops */
 }
 
 /* Disable background images in project cards and increase flexbox shrink and grow to fit
 the entire column and no more. */
-@media only screen and (max-width: 555px){
-    .card{
-        flex: 1 2 auto;
-    }
-    .card-content{
-        display: none;
-    }
-    .section-divider{
-        font-size: 250%;
-    }
-    
+@media only screen and (max-width: 555px) {
+	.card {
+		flex: 1 2 auto;
+	}
+	.card-content {
+		display: none;
+	}
+	.section-divider {
+		font-size: 250%;
+	}
 }
 
 /* Disable parallax on mobile devices */
-@media only screen and (max-width: 480px){
-    .parallax-img .card{
-        background-attachment: unset;
-    }
-    .section-divider{
-        padding:15px 10px;
-        font-size: 200%;
-        letter-spacing: 7px;
-    }
-    /* TODO: A hidden navbar for mobile */
+@media only screen and (max-width: 480px) {
+	.parallax-img .card {
+		background-attachment: unset;
+	}
+	.section-divider {
+		padding: 15px 10px;
+		font-size: 200%;
+		letter-spacing: 7px;
+	}
+	/* TODO: A hidden navbar for mobile */
 }
