@@ -1,208 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Biz's Portfolio</title>
-</head>
-<body>
-    <div class="parallax-img parallax-img-header">
-        <!-- This image title does not have the title class because it is 
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<title>Biz's Portfolio</title>
+	</head>
+	<body>
+		<div class="parallax-img parallax-img-header">
+			<!-- This image title does not have the title class because it is 
         a flexbox and will not have the same styling -->
-        <div class="header-intro">
-            <!-- Add border so the fixed image renders properly -->
-            <span class="parallax-img-border">
-                <!-- Purely for accessiblity, acts as span -->
-                <header>
-                    <!-- Header elements that introduce the website. The last one is only visible on mobile -->
-                    <div class="header header-flex">
-                        <h1 class="header-text" id="hello">Hello!</h1>
-                        <h2 class="header-text" id="myname">My name's</h2>
-                        <h2 class="header-text" id="biz">Biz</h2>
-                        <h2 class="header-text" id="code-things">
-                            I code things, check it out ⬇️
-                        </h2>
-                    </div>
-                    <nav class="header-nav">
-                        <div class="header">
-                            <!-- Navigation elements for the header -->
-                            <h2 class="header-text">I code things,</h2>
-                            <h2 class="header-text">check it out ⬇️</h2>
-                            <!-- The header links are moved to the side together, and stylized seperatly -->
-                            <div class="header-links">
-                                <h2 class="header-link header-text" id="projects-link">
-                                    <a href="#projects">Projects</a>
-                                </h2>
-                                <h2 class="header-link header-text" id="about-me-link">
-                                    <a href="#about-me">About Me</a>
-                                </h2>
-                                <h2 class="header-link header-text" id="contact-link">
-                                    <a href="#contact">Contact</a>
-                                </h2>
-                            </div>
-                        </div>
-                        <!-- TODO: A hidden navbar that will display once the user scrolls 
+			<div class="header-intro">
+				<!-- Add border so the fixed image renders properly -->
+				<span class="parallax-img-border">
+					<!-- Purely for accessiblity, acts as span -->
+					<header>
+						<!-- Header elements that introduce the website. The last one is only visible on mobile -->
+						<div class="header header-flex">
+							<h1 class="header-text" id="hello">Hello!</h1>
+							<h2 class="header-text" id="myname">My name's</h2>
+							<h2 class="header-text" id="biz">Biz</h2>
+							<h2 class="header-text" id="code-things">
+								I code things, check it out ⬇️
+							</h2>
+						</div>
+						<nav class="header-nav">
+							<div class="header">
+								<!-- Navigation elements for the header -->
+								<h2 class="header-text">I code things,</h2>
+								<h2 class="header-text">check it out ⬇️</h2>
+								<!-- The header links are moved to the side together, and stylized seperatly -->
+								<div class="header-links">
+									<h2
+										class="header-link header-text"
+										id="projects-link">
+										<a href="#projects">Projects</a>
+									</h2>
+									<h2
+										class="header-link header-text"
+										id="about-me-link">
+										<a href="#about-me">About Me</a>
+									</h2>
+									<h2
+										class="header-link header-text"
+										id="contact-link">
+										<a href="#contact">Contact</a>
+									</h2>
+								</div>
+							</div>
+							<!-- TODO: A hidden navbar that will display once the user scrolls 
                         past the first section -->
-                        <!-- TODO: A hidden navbar for mobile -->
-                    </nav>
-                </header>
-            </span>
-        </div>
-    </div>
-    <!-- Section divider allows for cleaner parallax transitions -->
-    <section id="projects" class="section-divider after-header">
-        <h3>Projects</h3>
-    </section>
-    <!-- Projects section -->
-    <div class="parallax-img parallax-img-projects">
-        <!-- Flexbox which contains all cards -->
-        <div class="cards-container">
-            <!-- Every card is a seperate section with specific styling -->
-            <!-- The first card is larger than the others -->
-            <section class="card" id="first-card">
-                <!-- All elements of the card has there own link to maximize anchor tag range. -->
-                <h4 class="card-title">
-                    <a href="https://github.com/BizTheHabesha/group-6-project-1">
-                        Boss Fight!
-                    </a>
-                </h4>
-                <div class="card-content" id="boss-fight-card">
-                    <a class="card-image-link" href="https://github.com/BizTheHabesha/group-6-project-1"></a>
-                </div>
-                <p class="card-desc">
-                    <a href="https://github.com/BizTheHabesha/group-6-project-1">
-                        A group project to create a fun singleplayer game using jQuery, Bulma, and several APIs.
-                    </a>
-                </p>
-            </section>
-            <section class="card">
-                <h4 class="card-title">
-                    <a href="https://github.com/BizTheHabesha/Command-Prompt-Chess">
-                        Command Prompt Chess
-                    </a>
-                </h4>
-                <div class="card-content" id="chess-card">
-                    <a class="card-image-link" href="https://github.com/BizTheHabesha/Command-Prompt-Chess"></a>
-                </div>
-                <p class="card-desc">
-                    <a href="https://github.com/BizTheHabesha/Command-Prompt-Chess">
-                        The game of chess written in C++ and played in the command prompt.
-                    </a>
-                </p>
-            </section>
-            <section class="card">
-                <h4 class="card-title">
-                    <a href="https://github.com/BizTheHabesha/OASIS-Online">
-                        O.A.S.I.S. Online
-                    </a>
-                </h4>
-                <div class="card-content" id="oasis-online-card">
-                    <a class="card-image-link" href="https://github.com/BizTheHabesha/OASIS-Online"></a>
-                </div>
-                <p class="card-desc">
-                    <a href="https://github.com/BizTheHabesha/OASIS-Online">
-                        An attempt at making O.A.S.I.S Online in Lua. Though the project
-                        is deprecated now, I hope it can serve as a repository for
-                        other Lua devs.
-                    </a>
-                    
-                </p>
-            </section>
-            <section class="card">
-                <h4 class="card-title">
-                    <a href="https://github.com/BizTheHabesha/prework-study-guide">
-                        Prework Study Guide
-                    </a>
-                </h4>
-                <div class="card-content" id="prework-card">
-                    <a class="card-image-link" href="https://github.com/BizTheHabesha/prework-study-guide"></a>
-                </div>
-                <p class="card-desc">
-                    <a href="https://github.com/BizTheHabesha/prework-study-guide">
-                        A study guide to take notes and jot down interesting details about
-                        all the stuff I'm learning. This was made as part of the prework for
-                        my bootcamp, hence 'prework' study guide.
-                    </a>
-                    
-                </p>
-            </section>
-        </div>
-    </div>
+							<!-- TODO: A hidden navbar for mobile -->
+						</nav>
+					</header>
+				</span>
+			</div>
+		</div>
+		<!-- Section divider allows for cleaner parallax transitions -->
+		<section id="projects" class="section-divider after-header">
+			<h3>Projects</h3>
+		</section>
+		<!-- Projects section -->
+		<div class="parallax-img parallax-img-projects">
+			<!-- Flexbox which contains all cards -->
+			<div class="cards-container">
+				<!-- Every card is a seperate section with specific styling -->
+				<!-- The first card is larger than the others -->
+				<section class="card" id="first-card">
+					<!-- All elements of the card has there own link to maximize anchor tag range. -->
+					<h4 class="card-title">
+						<a
+							href="https://github.com/BizTheHabesha/group-6-project-1">
+							Boss Fight!
+						</a>
+					</h4>
+					<div class="card-content" id="boss-fight-card">
+						<a
+							class="card-image-link"
+							href="https://github.com/BizTheHabesha/group-6-project-1"></a>
+					</div>
+					<p class="card-desc">
+						<a
+							href="https://github.com/BizTheHabesha/group-6-project-1">
+							A group project to create a fun singleplayer game
+							using jQuery, Bulma, and several APIs.
+						</a>
+					</p>
+				</section>
+				<section class="card">
+					<h4 class="card-title">
+						<a
+							href="https://github.com/BizTheHabesha/Command-Prompt-Chess">
+							Command Prompt Chess
+						</a>
+					</h4>
+					<div class="card-content" id="chess-card">
+						<a
+							class="card-image-link"
+							href="https://github.com/BizTheHabesha/Command-Prompt-Chess"></a>
+					</div>
+					<p class="card-desc">
+						<a
+							href="https://github.com/BizTheHabesha/Command-Prompt-Chess">
+							The game of chess written in C++ and played in the
+							command prompt.
+						</a>
+					</p>
+				</section>
+				<section class="card">
+					<h4 class="card-title">
+						<a href="https://github.com/BizTheHabesha/OASIS-Online">
+							O.A.S.I.S. Online
+						</a>
+					</h4>
+					<div class="card-content" id="oasis-online-card">
+						<a
+							class="card-image-link"
+							href="https://github.com/BizTheHabesha/OASIS-Online"></a>
+					</div>
+					<p class="card-desc">
+						<a href="https://github.com/BizTheHabesha/OASIS-Online">
+							An attempt at making O.A.S.I.S Online in Lua. Though
+							the project is deprecated now, I hope it can serve
+							as a repository for other Lua devs.
+						</a>
+					</p>
+				</section>
+				<section class="card">
+					<h4 class="card-title">
+						<a
+							href="https://github.com/BizTheHabesha/prework-study-guide">
+							Prework Study Guide
+						</a>
+					</h4>
+					<div class="card-content" id="prework-card">
+						<a
+							class="card-image-link"
+							href="https://github.com/BizTheHabesha/prework-study-guide"></a>
+					</div>
+					<p class="card-desc">
+						<a
+							href="https://github.com/BizTheHabesha/prework-study-guide">
+							A study guide to take notes and jot down interesting
+							details about all the stuff I'm learning. This was
+							made as part of the prework for my bootcamp, hence
+							'prework' study guide.
+						</a>
+					</p>
+				</section>
+				<section class="card">
+					<h4 class="card-title">
+						<a
+							href="https://github.com/BizTheHabesha/group-1-project-2">
+							Score Sensei
+						</a>
+					</h4>
+					<div class="card-content" id="prework-card">
+						<a
+							class="card-image-link"
+							href="https://github.com/BizTheHabesha/group-1-project-2"></a>
+					</div>
+					<p class="card-desc">
+						<a
+							href="https://github.com/BizTheHabesha/group-1-project-2">
+							A fully functional website that can show you your
+							favorite teams and their scores. Uses the Sports-API
+							API and Twilio, as well as Express, Sequelize, and
+							Handlebars.
+						</a>
+					</p>
+				</section>
+			</div>
+		</div>
 
-    <section id="about-me" class="section-divider">
-        <h3>About Me</h3>
-    </section>
+		<section id="about-me" class="section-divider">
+			<h3>About Me</h3>
+		</section>
 
+		<div class="parallax-img parallax-img-about-me">
+			<div class="img-container">
+				<img
+					id="selfie"
+					src="./assets/img/selfie.jpeg"
+					alt="A picture of Biz in the Boulder mountains." />
+			</div>
+			<div class="text-container">
+				<p class="selfie-text">
+					Hello! My name is Biz, and I'm working to become a full
+					stack developer. As of now, I'm proffcient in Lua, C++, and
+					C# and have deployed in each in at least one project. But
+					enough about my skills, you've (hopefully) already seen my
+					skills in the projects section. My full name is Bisrat
+					Gebrekidan and I was born in Addis Ababa, Ethiopia. Me and
+					my cousin Sammy have been playing computer games since I
+					came to America in 2006, and I inevitably picked up game
+					development at a young age. My first language was Lua, which
+					I used in Roblox Studio to make several games. By the time I
+					was in high school, I had begun C# and unity. All throughout
+					my life my family told me that I was meant to be an
+					engineer, and they told me to take inspiration from his
+					mechanical engineering background. It wasn't until I started
+					applying to university that I realized I could turn coding
+					into a career in its own right. Three years later, and I'm
+					three quarters through my degree and pursuing a bootcamp
+					certificate as well.
+				</p>
+			</div>
+		</div>
 
-    <div class="parallax-img parallax-img-about-me">
-        <div class="img-container">
-            <img id="selfie" src="./assets/img/selfie.jpeg" alt="A picture of Biz in the Boulder mountains.">
-        </div>
-        <div class="text-container">
-            <p class="selfie-text">
-                Hello! My name is Biz, and I'm working to 
-                become a full stack developer. As of now,
-                I'm proffcient in Lua, C++, and C# and have
-                deployed in each in at least one project.
-                But enough about my skills, you've
-                (hopefully) already seen my skills in the
-                projects section. My full name is Bisrat
-                Gebrekidan and I was born in Addis Ababa,
-                Ethiopia. Me and my cousin Sammy have been
-                playing computer games since I came to
-                America in 2006, and I inevitably picked up
-                game development at a young age. My first
-                language was Lua, which I used in Roblox
-                Studio to make several games. By the time I
-                was in high school, I had begun C# and
-                unity. All throughout my life my family
-                told me that I was meant to be an engineer,
-                and they told me to take inspiration from
-                his mechanical engineering background. It
-                wasn't until I started applying to university
-                that I realized I could turn coding into a
-                career in its own right. Three years later,
-                and I'm three quarters through my degree
-                and pursuing a bootcamp certificate as well.
-            </p>
-        </div>
-    </div>
+		<section id="contact" class="section-divider">
+			<h3>Contact</h3>
+		</section>
 
-    <section id="contact" class="section-divider">
-        <h3>Contact</h3>
-    </section>
-
-    <div class="parallax-img parallax-img-contact">
-        <!-- Contact nav takes most of styling from header, but slight differences require additional classes -->
-        <div class="contact-nav">
-            <h2 class="contact-link mailto-link">
-                <a href="mailto:gebrekidanbisratt@gmail.com">
-                    Personal Email
-                </a>
-            </h2>
-            <p class="contact-link-desc">For inquiries about projects or questions on implementation</p>
-            <h2 class="contact-link mailto-link">
-                <a href="mailto:biz@bisrat.dev">
-                    Professional Email
-                </a>
-            </h2>
-            <p class="contact-link-desc">Preferred for business inquiries</p>
-            <h2 class="contact-link tel-link">
-                <a href="tel:+14252707107">
-                    Professional Phone Number
-                </a>
-            </h2>
-            <p class="contact-link-desc">Also for business inquiries, but I wont always be reachable by phone.</p>
-        </div>
-    </div>
-    <footer>
-        <h3><a class="footer-link" id="github-footer-link" href="https://github.com/BizTheHabesha">Github</a></h3>
-        <h2>Made with ❤️ and CSS</h2>
-        <h3><a class="footer-link" id="twitch-footer-link" href="https://www.twitch.tv/chillwithbiz">Twitch</a></h3>
-    </footer>
-    <script src="./assets/js/script.js"></script>
-</body>
+		<div class="parallax-img parallax-img-contact">
+			<!-- Contact nav takes most of styling from header, but slight differences require additional classes -->
+			<div class="contact-nav">
+				<h2 class="contact-link mailto-link">
+					<a href="mailto:gebrekidanbisratt@gmail.com">
+						Personal Email
+					</a>
+				</h2>
+				<p class="contact-link-desc">
+					For inquiries about projects or questions on implementation
+				</p>
+				<h2 class="contact-link mailto-link">
+					<a href="mailto:biz@bisrat.dev"> Professional Email </a>
+				</h2>
+				<p class="contact-link-desc">
+					Preferred for business inquiries
+				</p>
+				<h2 class="contact-link tel-link">
+					<a href="tel:+14252707107"> Professional Phone Number </a>
+				</h2>
+				<p class="contact-link-desc">
+					Also for business inquiries, but I wont always be reachable
+					by phone.
+				</p>
+			</div>
+		</div>
+		<footer>
+			<h3>
+				<a
+					class="footer-link"
+					id="github-footer-link"
+					href="https://github.com/BizTheHabesha"
+					>Github</a
+				>
+			</h3>
+			<h2>Made with ❤️ and CSS</h2>
+			<h3>
+				<a
+					class="footer-link"
+					id="twitch-footer-link"
+					href="https://www.twitch.tv/chillwithbiz"
+					>Twitch</a
+				>
+			</h3>
+		</footer>
+		<script src="./assets/js/script.js"></script>
+	</body>
 </html>
